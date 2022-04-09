@@ -1,36 +1,32 @@
 package notas;
 import java.util.Scanner;
 /**
- * Clase que permite calcular notas ingresadas por el usuario
+ * Clase que permite comprobar la aprobacion de notas ingresadas por el usuario.
  * @author jorge
  *
  */
 public class Notas {
-	//declaramos la variables que nos hacen falta
+	//declaramos la variables que nos hacen falta.
 	double uf1, uf2, uf3;
 	double acu1, acu2, acu3, def;
-	//utilizames ecaner para poder introducir datos
 	Scanner entrada = new Scanner(System.in);
 	/**
-	 * Metodo que permite al usuario ingresar las notas a traves del teclado
+	 * Metodo que permite al usuario ingresar las notas a traves del teclado.
 	 */
 	public void IngresaNotas() {
-		//cuando ejeuctamos este metodo lo primnero que queremos es que nos pida notas
+		//cuando ejecutamos este metodo lo primero que queremos es que nos pida notas
 		System.out.println("ingrese las notas del estudiante");	
 		System.out.print("ingrese nota 1: ");
-	
 		uf1= entrada.nextDouble();
 		System.out.print("ingrese nota 2: ");
-		
 		uf2= entrada.nextDouble();
 		System.out.print("ingrese nota 3: ");
-		
 		uf3= entrada.nextDouble();
 	}
 	/**
-	 *  Metodo para comprobar bien entroduccion de notas
+	 *  Metodo para comprobar la correcta introduccion de notas
 	 */
-	public void comprobarcion(){
+	public void comprobacion(){
 		if (uf1>10) {
 			System.out.println(" nota1 mal introducida");
 		}else {
@@ -55,7 +51,7 @@ public class Notas {
 		acu2 = uf2 * 0.35;
 		acu3 = uf3 * 0.30;
 		def = acu1 + acu2+ acu3;	
-		//hasta aqui la tenemos calculada peor no la mostramos
+		//hasta aqui la tenemos calculada pero no la mostramos
 	}
 	/**
 	 * Metodo para mostrar las notas
@@ -67,9 +63,9 @@ public class Notas {
 		System.out.println(" nota2 = " + uf2);
 		System.out.println(" nota3 = " + uf3);
 		
-		System.out.println(" acumuado 1 = "+ acu1);
-		System.out.println(" acumuado 2 = "+ acu2);
-		System.out.println(" acumuado 3 = "+ acu3);
+		System.out.println(" acumulado 1 = "+ acu1);
+		System.out.println(" acumualdo 2 = "+ acu2);
+		System.out.println(" acumulado 3 = "+ acu3);
 		
 		System.out.println(" nota definitiva es = "+ def);
 	}
@@ -95,7 +91,7 @@ public class Notas {
 		// creamos mecanismos para llamar a cualquier metodo fuero de la clase
 		Notas fc= new Notas();
 		fc.IngresaNotas();	
-		fc.comprobarcion();
+		fc.comprobacion();
 		fc.Calculonotas();
 		fc.Mostrar();	
 		fc.aprobado();
